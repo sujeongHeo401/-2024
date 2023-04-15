@@ -1,6 +1,10 @@
 
-// 링크 https://leetcode.com/contest/biweekly-contest-102/
-#### (1/4 solve)
+https://leetcode.com/contest/biweekly-contest-102/
+
+
+- 4문제 중에 1개 풀... 김장하자.🥁🥁
+
+
 2639. Find the Width of Columns of a Grid
 
 ```
@@ -21,3 +25,4 @@ class Solution {
     }
 }
 ```
+
