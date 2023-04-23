@@ -33,5 +33,6 @@ string cipher(int k, string s) {
     
 }
 ```
+참고 : https://www.youtube.com/watch?v=AYk8H7EtjX4
 
 자바로도 풀어야 하는데 귀찮🥸
