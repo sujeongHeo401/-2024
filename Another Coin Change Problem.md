@@ -28,21 +28,23 @@ class Solution {
 c++
 ```
 class Solution {
-    public static boolean makeChanges(int N, int K, int target, int[] coins) {
+  public:
+    bool makeChanges(int N, int K, int target, vector<int> &coins) {
         // code here
+        // bool dp[101][1001];
+        vector<vector<bool>> dp(101, vector<bool>(1001, false));
         
-        boolean[][] dp = new boolean[101][1001];
-        dp[0][0]=true;
-        for(int k = 1; k <= K; k++){
+        dp[0][0] = true;
+        for(int k = 1; k <= K;k++){
             for(int t = 0; t <= target; t++){
                 if(dp[k-1][t]){
-                    for(int i = 0; i < coins.length; i++){
-                        dp[k][t + coins[i]] = true;
-                     }
+                    for(int i = 0; i < coins.size(); i++){
+                        dp[k][t+coins[i]] = true;
+                    }
                 }
             }
         }
         return dp[K][target];
     }
-}
+};
 ```
