@@ -1,34 +1,55 @@
-https://leetcode.com/problems/create-hello-world-function/solutions/3486599/solution-o-1-javascript-typescript/?utm_campaign=PostD1&utm_medium=Post&utm_source=Post&gio_link_id=QPDw0kJR&orderBy=hot
+https://leetcode.com/problems/create-hello-world-function/editorial/?utm_campaign=PostD1&utm_medium=Post&utm_source=Post&gio_link_id=QPDw0kJR
 
+### Function Syntax
 
-
-js
+* Javascript
 ```
-/**
- * @return {Function}
- */
 var createHelloWorld = function() {
-    return function(...args) {
+    return function() {
         return "Hello World";
     }
 };
-
-/**
- * const f = createHelloWorld();
- * f(); // "Hello World"
- */
- ```
-
- typescript
-
 ```
-function createHelloWorld(){
-    return function(...args): string {
-        return "Hello World";
-    };
-};
 
-/**
- * const f = createHelloWorld();
- * f(); // "Hello World"
- */
+* Typescript
+```
+var createHelloWorld = function(){
+    return function(): string{
+        return "Hello World";
+    }
+};
+```
+
+### Arrow Syntax
+
+* Javascript
+```
+var createHelloWorld = function() {
+    return () => "Hello World";
+};
+```
+
+* Typescript
+```
+var createHelloWorld = function(){
+    return () => "Hello World";
+};
+```
+
+### Arrow Syntax + Rest Arguments
+
+* Javascript 
+```
+var createHelloWorld = function(){
+    return(...args) => "Hello World";
+};
+```
+
+* TypeScript
+```
+var createHelloWorld = function(){
+    return (...args:any[]) => "Hello World";
+};
+```
+
+타입스크립트 맛있당
