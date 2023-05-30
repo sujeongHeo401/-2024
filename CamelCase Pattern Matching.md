@@ -25,7 +25,7 @@ class Solution{
             } -->
             for(char ch: word.toCharArray()){
                 if(ch >= 'A' && ch <= 'Z'){
-                    if(ch==Pattern.toCharAt(index)){
+                    if(ch==Pattern.charAt(index)){
                         index++;
                     }
                     else break;
