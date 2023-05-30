@@ -4,7 +4,7 @@ java 와 c++ 로 풀어보았다..
 유투브 풀이 영상과 chatGPT 로 답을 얻은 것이니, 너무 심한 욕은 하지 말자
 
 
-# 리팩토링 전
+
 JAVA
 ```
 class Solution{
