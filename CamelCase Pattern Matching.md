@@ -12,11 +12,24 @@ class Solution{
         //code here
         ArrayList<String> ans = new ArrayList<>();
         for(String word: Dictionary){
+            int index = 0;
             String curr = "";
-            for(char ch: word.toCharArray()){
+<!--             for(char ch: word.toCharArray()){
                 if(ch >= 'A' && ch <= 'Z'){
                     curr += ch;
                     if(curr.equals(Pattern)){
+                        ans.add(word);
+                        break;
+                    }
+                }
+            } -->
+            for(char ch: word.toCharArray()){
+                if(ch >= 'A' && ch <= 'Z'){
+                    if(ch==Pattern.toCharAt(index)){
+                        index++;
+                    }
+                    else break;
+                    if(index==Pattern.length()){
                         ans.add(word);
                         break;
                     }
@@ -35,28 +48,34 @@ class Solution{
 
 C++
 ```
-class Solution{
-    ArrayList<String> CamelCase(int N,String[] Dictionary,String Pattern){
-        //code here
-        ArrayList<String> ans = new ArrayList<>();
-        for(String word: Dictionary){
-            String curr = "";
-            for(char ch: word.toCharArray()){
-                if(ch >= 'A' && ch <= 'Z'){
-                    curr += ch;
-                    if(curr.equals(Pattern)){
-                        ans.add(word);
+class Solution {
+  public:
+    vector<string> CamelCase(int N, vector<string> Dictionary, string Pattern) {
+        // code here
+        vector<string> ans;
+        for(auto &word:Dictionary){
+            int index = 0;
+            string curr="";
+            for(auto &ch:word){
+                if(ch >= 'A' and ch <= 'Z'){
+                    if(ch==Pattern[index]){
+                        index++;
+                    }
+                    else break;
+                    if(index==Pattern.length()){
+                        ans.push_back(word);
                         break;
                     }
                 }
             }
         }
-        if(ans.isEmpty()){
-            ans.add("-1");
+        if(ans.size() == 0){
+            ans.push_back("-1");
         }
-        
-        Collections.sort(ans);
         return ans;
     }
-}
+};
 ```
+
+
+C+
